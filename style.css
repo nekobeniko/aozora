@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+*	{
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height:1.8;
+  box-sizing:border-box;
+  font-size:18px; 
+}
+h1,h2,h3,h4,h5,h6 {
+  margin:0;
+  padding:0;
+}
+h1,h2{
+  font-family: serif;
+}
+ol,ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+img {
+  width:100%;
+}
+a	{ 
+  color:#f00;
+  text-decoration:none;
+}
+/*ヘッダーエリア*/
+.fixHeader {
+  background:rgba(177, 177, 177, 0.8);
+  padding:30px 0;
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+.fixHeader-inner .logo { 
+  text-align:center;
+}
+.fixHeader-inner .logo h1 { 
+  line-height:0;
+}
+.fixHeader-inner .logo img { 
+  width:120px;
+}
+.fixHeader-inner .gnavi {
+  display:flex;
+  justify-content:center;
+}
+.fixHeader-inner .gnavi a { 
+  color:#000; 
+  display:block; 
+  padding:10px; 
+  font-size:22px; 
+}
+/*メインエリア*/
+main { 
+  padding:50px 25px;
+}
+main section {
+  margin-bottom:80px;
+}
+main section:last-child {
+  margin-bottom:0px;
+}
+main h1 {
+  text-align:center;
+}
+main .news p {
+  text-align:center;
+}
+main .items li {
+  background:#e1e1e1;
+  text-align:center;
+  padding:15px;
+  margin-bottom:40px;
+}
+main .items li img {
+  border-radius:12px;
+}
+main .contact {
+  text-align:center;
+}
+main .contact .btn-ori-lg a {
+  display:block;
+  background:#f12929;
+  color:#fff;
+  padding:25px 0px;
+  border-radius:8px;
+  width:80%;
+  margin:auto;
+}
+/*サイドメニューエリア*/
+aside { 
+  background:#e3f5fb;
+}
+.smenu li {
+  border-bottom:1px dotted #000;
+  text-align:center;
+}
+.smenu li:last-child {
+  border-bottom:0;
+}
+.smenu li a {
+  display:block;
+  padding:15px;
+}
+/*フッターエリア*/
+footer small {
+  display:block;
+  padding:50px 0;
+  text-align:center;
+  background:#333;
+  color:#fff;
+}
+
+/*レスポンシブ対応PC用*/
+@media (min-width:950px) {
+  .fixHeader-inner {
+    display:flex;
+    margin:0 50px;
+    justify-content:space-between;
+  }
+  .container {
+    display:flex;
+    flex-direction:row-reverse;
+  }
+  aside { 
+    width:300px;
+  }
+  main {
+    width:calc(100% - 300px);
+  }
+  main .items {
+    display:flex;
+    flex-wrap:wrap;
+  }
+  main .items li {
+    width:calc((100% - 60px) / 3);
+    margin:0 10px 40px;
+  }
+  main .contact .btn-ori-lg a {
+    width:300px;
+  }
+  .smenu li a:hover {
+    background:#c0e8f0;
+  }
+}
